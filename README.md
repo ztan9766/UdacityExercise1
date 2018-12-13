@@ -7,14 +7,14 @@
 关于如何开始这个项目的更详细的指导，可以查阅这份[指南](https://gdgdocs.org/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true)。
 
 
-#使用方法
+##使用方法
 
 游览器中直接打开index.html
 
-#操作方式
+##操作方式
 
 通过键盘上下左右键控制角色躲避来往的敌人
 
-#获胜条件
+##获胜条件
 
 通过躲避敌人到达进入水中即胜利

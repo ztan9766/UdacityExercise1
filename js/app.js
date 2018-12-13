@@ -4,6 +4,7 @@ var VictoryBoard = function(){
 
 VictoryBoard.prototype.render = function(){
   if(this.won){
+    //draw victory information
     ctx.font = "60px Georgia";
     ctx.fillStyle = "red"
     ctx.textAlign = "center";
@@ -13,6 +14,7 @@ VictoryBoard.prototype.render = function(){
 
 VictoryBoard.prototype.win = function(){
   this.won = true;
+  //hide all enemies and player
   allEnemies.forEach(function(enemy) {
     enemy.hide();
   });
@@ -32,6 +34,7 @@ var Enemy = function() {
 
 Enemy.prototype.reset = function(){
   this.x = enemyActiveRange.min;
+  // enemy has a random speed and will appear in any line of stones randomly.
   this.y = enemyActiveRange.arrayOfY[Math.floor(Math.random()*enemyActiveRange.arrayOfY.length)]
   this.speed = Math.floor(150 * Math.random() + 40);
 }
@@ -71,6 +74,7 @@ PlayerObject.prototype.update = function(coordinateX, coordinateY) {
     if(VictoryBoard.won) return
     if (typeof coordinateX == "undefined" || typeof coordinateY == "undefined")
       return;
+    //make sure player can not move outside any borders
     this.x =
       coordinateX > border.max.x
         ? border.max.x
